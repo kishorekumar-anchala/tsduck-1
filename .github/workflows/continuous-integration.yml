@@ -127,20 +127,4 @@ jobs:
         done
         exit $status
 
-  build_docs:
-    name: Build documentation
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-    - uses: actions/checkout@master
-    - name: Install dependencies
-      run: |
-        scripts/install-prerequisites.sh
-        echo "Doxygen version: $(doxygen --version)"
-    - name: Build guides
-      run: |
-        make docs
-    - name: Build Doxygen reference
-      run: |
-        make doxygen DOXYFLAGS=--update-doxygen
+
