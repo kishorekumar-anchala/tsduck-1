@@ -30,7 +30,7 @@
 #  - If this repo does not exist, we grab the "reference" repo from
 #    tsduck/tsduck-test
 #
-#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 name: Continuous integration
 
