@@ -52,7 +52,7 @@ jobs:
         std: [17, 20]
         include:
         - target: Win64
-          suffix: amd64
+          suffix: x64
           testopt: --dev
     
 
