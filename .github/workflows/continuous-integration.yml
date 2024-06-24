@@ -125,19 +125,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Win64, Win32]
+        target: [Win64]
         configuration: [Release]
         std: [17, 20]
         include:
         - target: Win64
-          suffix: x64
+          suffix: amd64
           testopt: --dev
-        - target: Win32
-          suffix: Win32
-          testopt: --dev32
-        exclude:
-        - target: Win32
-          std: 20
+    
+
     name: Build on ${{ matrix.target }} with VC++, C++${{ matrix.std }}
     runs-on: windows-latest
     env:
